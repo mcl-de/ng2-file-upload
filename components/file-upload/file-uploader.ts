@@ -291,6 +291,12 @@ export class FileUploader {
      });
      });*/
 
+    if (this.options.params !== undefined) {
+      for (let key in this.options.params) {
+        form.append(key, this.options.params[key]);
+      }
+    }
+
     if (typeof item._file.size !== 'number') {
       throw new TypeError('The file specified is no longer valid');
     }
