@@ -2,41 +2,32 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "sourceMap": true,
-    "declaration": true,
-    "removeComments": true,
+    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "listFiles": false,
-    "noLib": false,
+    "sourceMap": false,
+    "noEmitHelpers": false,
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true
+    "declaration": true,
+    "skipLibCheck": true,
+    "stripInternal": true,
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "types": [
+      "jasmine",
+      "node",
+      "webpack"
+    ]
   },
   "exclude": [
-    "./node_modules"
+    "node_modules",
+    "bundles",
+    "dist"
   ],
-  "filesGlob": [
-    "./ng2-file-upload.ts",
-    "./components/**/*.ts",
-    "!./components/**/*.d.ts",
-    "./typings/index.d.ts",
-    "./typings_custom/**/*.d.ts"
-  ],
-  "atom": {
-    "rewriteTsconfig": true
-  },
   "files": [
-    "./ng2-file-upload.ts",
-    "./components/file-upload/file-drop.directive.spec.ts",
-    "./components/file-upload/file-drop.directive.ts",
-    "./components/file-upload/file-item.class.ts",
-    "./components/file-upload/file-like-object.class.ts",
-    "./components/file-upload/file-select.directive.ts",
-    "./components/file-upload/file-type.class.ts",
-    "./components/file-upload/file-upload.module.ts",
-    "./components/file-upload/file-uploader.class.ts",
-    "./typings/index.d.ts",
-    "./typings_custom/es6-angular-legacy.d.ts",
-    "./typings_custom/es6.d.ts"
+    "./demo/custom-typings.d.ts",
+    "./ng2-file-upload.ts"
   ]
 }
