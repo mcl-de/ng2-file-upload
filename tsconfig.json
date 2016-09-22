@@ -13,13 +13,16 @@
     "suppressImplicitAnyIndexErrors": true
   },
   "exclude": [
-    "./node_modules",
-    "./**/*.spec.ts",
-    "./**/*.d.ts"
+    "./components/**/*.d.ts",
+    "./components/**/*.spec.ts",
+    "./demo/**/*.d.ts",
+    "./demo/**/*.spec.ts",
+    "./node_modules"
   ],
   "filesGlob": [
-    "./components/**/*.ts",
-    "./demo/**/*.ts"
+    "./**/*.ts",
+    "./typings/index.d.ts",
+    "./typings_custom/**/*.d.ts"
   ],
   "atom": {
     "rewriteTsconfig": true
@@ -39,6 +42,15 @@
     "./demo/index.ts",
     "./demo/ng2-file-upload-demo.module.ts",
     "./demo/polyfills.ts",
-    "./demo/vendor.ts"
+    "./demo/vendor.ts",
+    "./ng2-file-upload.d.ts",
+    "./ng2-file-upload.ts",
+    "./typings_custom/es6-angular-legacy.d.ts",
+    "./typings_custom/es6.d.ts",
+    "./typings/globals/es2015/index.d.ts",
+    "./typings/globals/jasmine/index.d.ts",
+    "./typings/globals/require/index.d.ts",
+    "./typings/index.d.ts",
+    "./typings/modules/webpack/index.d.ts"
   ]
 }

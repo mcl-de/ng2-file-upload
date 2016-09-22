@@ -11,12 +11,14 @@
     "declaration": true
   },
   "exclude": [
-    "./node_modules",
-    "./**/*.spec.ts",
-    "./**/*.d.ts"
+    "./components/**/*.d.ts",
+    "./components/**/*.spec.ts",
+    "./node_modules"
   ],
   "filesGlob": [
-    "./components/**/*.ts"
+    "./**/*.ts",
+    "./typings/index.d.ts",
+    "./typings_custom/**/*.d.ts"
   ],
   "files": [
     "./components/file-upload/file-drop.directive.ts",
@@ -25,6 +27,14 @@
     "./components/file-upload/file-select.directive.ts",
     "./components/file-upload/file-type.class.ts",
     "./components/file-upload/file-upload.module.ts",
-    "./components/file-upload/file-uploader.class.ts"
+    "./components/file-upload/file-uploader.class.ts",
+    "./ng2-file-upload.ts",
+    "./typings_custom/es6-angular-legacy.d.ts",
+    "./typings_custom/es6.d.ts",
+    "./typings/globals/es2015/index.d.ts",
+    "./typings/globals/jasmine/index.d.ts",
+    "./typings/globals/require/index.d.ts",
+    "./typings/index.d.ts",
+    "./typings/modules/webpack/index.d.ts"
   ]
 }
