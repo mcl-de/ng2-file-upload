@@ -30,7 +30,7 @@ export interface FileUploaderOptions {
   url?:string;
   disableMultipart?:boolean;
   itemAlias?: string;
-  params?: [{[key: string]: any}];
+  params?: {[key: string]: any};
 }
 
 export class FileUploader {
