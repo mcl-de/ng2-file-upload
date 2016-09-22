@@ -30,7 +30,7 @@ export interface FileUploaderOptions {
   url?:string;
   disableMultipart?:boolean;
   itemAlias?: string;
-	params?: [{[key: string]: any}];
+  params?: [{[key: string]: any}];
 }
 
 export class FileUploader {
@@ -57,7 +57,7 @@ export class FileUploader {
   }
 
   public setOptions(options:FileUploaderOptions):void {
-    this.options = Object.assign(this.options, options);
+    this.options = (Object as any).assign(this.options, options);
 
     this.authToken = options.authToken;
     this.autoUpload = options.autoUpload;
@@ -307,12 +307,12 @@ export class FileUploader {
       sendable = item._file;
     }
 
-
-		 if (this.options.params !== undefined) {
-	     for (let key in this.options.params) {
-	       sendable.append(key, this.options.params[key]);
-	     }
-	   }
+    if (this.options.params) {
+      Object.keys(this.options.params).some((key: string) => {
+        sendable.append(key, this.options.params[key]);
+        return true;
+      });
+    }
 
     xhr.upload.onprogress = (event:any) => {
       let progress = Math.round(event.lengthComputable ? event.loaded * 100 / event.total : 0);
