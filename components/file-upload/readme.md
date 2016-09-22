@@ -1,32 +1,17 @@
 ### Usage
 ```typescript
-import {FileSelect, FileDrop, FileUploader} from 'ng2-file-upload';
+import { FileSelectDirective, FileDropDirective, FileUploader } from 'ng2-file-upload/ng2-file-upload';
 ```
 
 ### Annotations
 ```typescript
-// class FileSelect
-@Directive({
-  selector: '[ng2-file-select]',
-  properties: ['uploader'],
-  host: {
-    '(change)': 'onChange()'
-  }
-})
+// class FileSelectDirective
+@Directive({ selector: '[ng2FileSelect]' })
 ```
 
 ```typescript
-// class FileDrop
-@Directive({
-  selector: '[ng2-file-drop]',
-  properties: ['uploader'],
-  events: ['fileOver'],
-  host: {
-    '(drop)': 'onDrop($event)',
-    '(dragover)': 'onDragOver($event)',
-    '(dragleave)': 'onDragLeave($event)'
-  }
-})
+// class FileDropDirective
+@Directive({ selector: '[ng2FileDrop]' })
 ```
 
 ## FileSelect API
@@ -35,10 +20,11 @@ import {FileSelect, FileDrop, FileUploader} from 'ng2-file-upload';
 
   - `uploader` - (`FileUploader`) - uploader object. See using in [demo](https://github.com/valor-software/ng2-file-upload/blob/master/demo/components/file-upload/simple-demo.ts)
 
-  Parameters that supported by this object:
+  Parameters supported by this object:
 
   1. `url` - URL of File Uploader's route
   2. `authToken` - auth token that will be applied as 'Authorization' header during file send.
+  3. `disableMultipart` - If 'true', disable using a multipart form for file upload and instead stream the file. Some APIs (e.g. Amazon S3) may expect the file to be streamed rather than sent via a form. Defaults to false.
 
 ## FileDrop API
 
@@ -48,6 +34,6 @@ import {FileSelect, FileDrop, FileUploader} from 'ng2-file-upload';
 
 ### Events
 
-  - `file-over` - it fires during 'over' and 'out' events for Drop Area; returns `boolean`: `true` if file is over Drop Area, `false` in case of out.
+  - `fileOver` - it fires during 'over' and 'out' events for Drop Area; returns `boolean`: `true` if file is over Drop Area, `false` in case of out.
   See using in [ts demo](https://github.com/valor-software/ng2-file-upload/blob/master/demo/components/file-upload/simple-demo.ts) and
   [html demo](https://github.com/valor-software/ng2-file-upload/blob/master/demo/components/file-upload/simple-demo.html)
