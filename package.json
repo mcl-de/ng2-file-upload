@@ -27,7 +27,9 @@
     "test:watch": "NODE_ENV=test ./node_modules/.bin/karma start --auto-watch --no-single-run",
     "preversion": "npm test",
     "version": "npm run flow.changelog && git add -A",
-    "postversion": "git push origin development && git push --tags"
+    "postversion": "git push origin NegSoft && git push --tags",
+		"postinstall": "npm run flow.compile"
+
   },
   "main": "ng2-file-upload.js",
   "typings": "ng2-file-upload.d.ts",

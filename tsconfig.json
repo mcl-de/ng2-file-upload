@@ -13,11 +13,34 @@
     "suppressImplicitAnyIndexErrors": true
   },
   "exclude": [
-    "node_modules"
+    "./node_modules",
+    "./**/*.spec.ts",
+    "./**/*.d.ts"
   ],
+  "filesGlob": [
+    "./components/**/*.ts",
+    "./demo/**/*.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  },
   "files": [
-    "./ng2-file-upload.ts",
-    "./demo/custom-typings.d.ts",
-    "./typings/index.d.ts"
+    "./components/file-upload/file-drop.directive.ts",
+    "./components/file-upload/file-drop.ts",
+    "./components/file-upload/file-item.class.ts",
+    "./components/file-upload/file-like-object.class.ts",
+    "./components/file-upload/file-select.directive.ts",
+    "./components/file-upload/file-type.class.ts",
+    "./components/file-upload/file-upload.module.ts",
+    "./components/file-upload/file-uploader.class.ts",
+    "./components/file-upload/file-uploader.ts",
+    "./demo/app.component.ts",
+    "./demo/components/file-upload-section.ts",
+    "./demo/components/file-upload/simple-demo.ts",
+    "./demo/components/file-upload/zs-file-demo/demo.ts",
+    "./demo/index.ts",
+    "./demo/ng2-file-upload-demo.module.ts",
+    "./demo/polyfills.ts",
+    "./demo/vendor.ts"
   ]
 }
