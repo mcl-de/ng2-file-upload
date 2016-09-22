@@ -1,15 +1,5 @@
 import { Component } from '@angular/core';
 
-<<<<<<< HEAD
-import {Component, View} from '@angular/core';
-import {CORE_DIRECTIVES} from '@angular/common';
-
-import {TAB_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
-import {SimpleDemo} from './file-upload/simple-demo';
-
-let name = 'File Upload';
-=======
->>>>>>> origin/development
 let doc = require('../../components/file-upload/readme.md');
 
 let tabDesc:Array<any> = [

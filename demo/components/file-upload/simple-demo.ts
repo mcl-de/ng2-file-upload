@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-/// <reference path="../../../tsd.d.ts" />
-
-import {Component} from '@angular/core';
-import {CORE_DIRECTIVES, FORM_DIRECTIVES, NgClass, NgStyle} from '@angular/common';
-import {FILE_UPLOAD_DIRECTIVES, FileUploader} from '../../../ng2-file-upload';
-=======
 import { Component } from '@angular/core';
 import { FileUploader } from '../../../ng2-file-upload';
->>>>>>> origin/development
 
 // webpack html imports
 let template = require('./simple-demo.html');
