@@ -20,13 +20,11 @@
   ],
   "files": [
     "./components/file-upload/file-drop.directive.ts",
-    "./components/file-upload/file-drop.ts",
     "./components/file-upload/file-item.class.ts",
     "./components/file-upload/file-like-object.class.ts",
     "./components/file-upload/file-select.directive.ts",
     "./components/file-upload/file-type.class.ts",
     "./components/file-upload/file-upload.module.ts",
-    "./components/file-upload/file-uploader.class.ts",
-    "./components/file-upload/file-uploader.ts"
+    "./components/file-upload/file-uploader.class.ts"
   ]
 }
