@@ -11,11 +11,22 @@
     "declaration": true
   },
   "exclude": [
-    "node_modules"
+    "./node_modules",
+    "./**/*.spec.ts",
+    "./**/*.d.ts"
+  ],
+  "filesGlob": [
+    "./components/**/*.ts"
   ],
   "files": [
-    "./typings/index.d.ts",
-    "./demo/custom-typings.d.ts",
-    "./ng2-file-upload.ts"
+    "./components/file-upload/file-drop.directive.ts",
+    "./components/file-upload/file-drop.ts",
+    "./components/file-upload/file-item.class.ts",
+    "./components/file-upload/file-like-object.class.ts",
+    "./components/file-upload/file-select.directive.ts",
+    "./components/file-upload/file-type.class.ts",
+    "./components/file-upload/file-upload.module.ts",
+    "./components/file-upload/file-uploader.class.ts",
+    "./components/file-upload/file-uploader.ts"
   ]
 }
