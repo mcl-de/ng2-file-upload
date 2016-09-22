@@ -30,6 +30,7 @@ export interface FileUploaderOptions {
   url?:string;
   disableMultipart?:boolean;
   itemAlias?: string;
+	params?: [{[key: string]: any}];
 }
 
 export class FileUploader {
@@ -293,6 +294,7 @@ export class FileUploader {
      form.append(key, value);
      });
      });*/
+
     if (typeof item._file.size !== 'number') {
       throw new TypeError('The file specified is no longer valid');
     }
@@ -304,6 +306,13 @@ export class FileUploader {
     } else {
       sendable = item._file;
     }
+
+
+		 if (this.options.params !== undefined) {
+	     for (let key in this.options.params) {
+	       sendable.append(key, this.options.params[key]);
+	     }
+	   }
 
     xhr.upload.onprogress = (event:any) => {
       let progress = Math.round(event.lengthComputable ? event.loaded * 100 / event.total : 0);
