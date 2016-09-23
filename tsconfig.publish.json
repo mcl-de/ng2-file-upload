@@ -2,25 +2,30 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "moduleResolution": "node",
+    "sourceMap": true,
+    "declaration": true,
+    "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": false,
-    "noEmitHelpers": false,
+    "listFiles": false,
+    "noLib": false,
     "noImplicitAny": true,
-    "declaration": true
+    "suppressImplicitAnyIndexErrors": true
   },
   "exclude": [
-    "./components/**/*.d.ts",
-    "./components/**/*.spec.ts",
     "./node_modules"
   ],
   "filesGlob": [
     "./**/*.ts",
+    "!./**/*.d.ts",
     "./typings/index.d.ts",
     "./typings_custom/**/*.d.ts"
   ],
+  "atom": {
+    "rewriteTsconfig": true
+  },
   "files": [
+    "./components/file-upload/file-drop.directive.spec.ts",
     "./components/file-upload/file-drop.directive.ts",
     "./components/file-upload/file-item.class.ts",
     "./components/file-upload/file-like-object.class.ts",
@@ -29,12 +34,8 @@
     "./components/file-upload/file-upload.module.ts",
     "./components/file-upload/file-uploader.class.ts",
     "./ng2-file-upload.ts",
-    "./typings_custom/es6-angular-legacy.d.ts",
-    "./typings_custom/es6.d.ts",
-    "./typings/globals/es2015/index.d.ts",
-    "./typings/globals/jasmine/index.d.ts",
-    "./typings/globals/require/index.d.ts",
     "./typings/index.d.ts",
-    "./typings/modules/webpack/index.d.ts"
+    "./typings_custom/es6-angular-legacy.d.ts",
+    "./typings_custom/es6.d.ts"
   ]
 }
