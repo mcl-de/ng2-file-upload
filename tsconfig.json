@@ -16,8 +16,11 @@
     "./node_modules"
   ],
   "filesGlob": [
-    "./**/*.ts",
-    "!./**/*.d.ts",
+    "./ng2-file-upload.ts",
+    "./components/**/*.ts",
+    "./demo/**/*.ts",
+    "!./components/**/*.d.ts",
+    "!./demo/**/*.d.ts",
     "./typings/index.d.ts",
     "./typings_custom/**/*.d.ts"
   ],
@@ -25,6 +28,7 @@
     "rewriteTsconfig": true
   },
   "files": [
+    "./ng2-file-upload.ts",
     "./components/file-upload/file-drop.directive.spec.ts",
     "./components/file-upload/file-drop.directive.ts",
     "./components/file-upload/file-item.class.ts",
@@ -41,7 +45,6 @@
     "./demo/ng2-file-upload-demo.module.ts",
     "./demo/polyfills.ts",
     "./demo/vendor.ts",
-    "./ng2-file-upload.ts",
     "./typings/index.d.ts",
     "./typings_custom/es6-angular-legacy.d.ts",
     "./typings_custom/es6.d.ts"
