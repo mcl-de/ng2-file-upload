@@ -28,7 +28,7 @@
     "preversion": "npm test",
     "version": "npm run flow.changelog && git add -A",
     "postversion": "git push origin NegSoft && git push --tags",
-		"postinstall": "npm run flow.compile"
+		"postinstall": "npm run flow.install:typings && npm run flow.compile:common"
 
   },
   "main": "ng2-file-upload.js",
