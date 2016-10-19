@@ -31,3 +31,8 @@ npm-debug.log
 /logs
 
 !/demo/components/file-upload/file-catcher.js
+
+# AoT generated files
+factories
+/**/*.metadata.json
+/**/*.ngfactory.ts
