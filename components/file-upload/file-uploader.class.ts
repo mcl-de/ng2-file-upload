@@ -30,6 +30,7 @@ export interface FileUploaderOptions {
   url?:string;
   disableMultipart?:boolean;
   itemAlias?: string;
+  authTokenHeader?: string;
   params?: {[key: string]: any};
 }
 
@@ -41,6 +42,7 @@ export class FileUploader {
   public progress:number = 0;
   public _nextIndex:number = 0;
   public autoUpload:any;
+  public authTokenHeader: string;
 
   public options:FileUploaderOptions = {
     autoUpload: false,
@@ -57,7 +59,7 @@ export class FileUploader {
   }
 
   public setOptions(options:FileUploaderOptions):void {
-    this.options = (Object as any).assign(this.options, options);
+    this.options = Object.assign(this.options, options);
 
     this.authToken = options.authToken;
     this.authTokenHeader = options.authTokenHeader || 'Authorization';
@@ -298,7 +300,6 @@ export class FileUploader {
      form.append(key, value);
      });
      });*/
-
     if (typeof item._file.size !== 'number') {
       throw new TypeError('The file specified is no longer valid');
     }
