@@ -27,7 +27,6 @@
   },
   "files": [
     "./ng2-file-upload.ts",
-    "./components/file-upload/file-drop.directive.spec.ts",
     "./components/file-upload/file-drop.directive.ts",
     "./components/file-upload/file-item.class.ts",
     "./components/file-upload/file-like-object.class.ts",
